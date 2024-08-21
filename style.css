@@ -1,25 +1,24 @@
-/* General Styles */
+/* Impostazione del font */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden; /* Per evitare lo scorrimento orizzontale indesiderato */
 }
 
+/* Header */
 header {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 20px 0;
+    background-color: #00274d; /* Blu scuro */
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
+/* Navigazione */
 nav ul {
     list-style: none;
     padding: 0;
@@ -32,41 +31,102 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ecf0f1;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
+/* Main Content */
 main {
     padding: 20px;
-    max-width: 1200px;
-    margin: auto;
+    position: relative;
 }
 
+/* Footer */
 footer {
     text-align: center;
-    padding: 15px;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #00274d; /* Blu scuro */
+    color: #fff;
 }
 
-footer p {
-    margin: 0;
+/* Colori e forme geometriche */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.1) 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Esempio di forme geometriche */
+.shape-one {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 10%;
+    background: rgba(0, 119, 204, 0.3); /* Blu chiaro */
+}
+
+.shape-two {
+    width: 100px;
+    height: 100px;
+    bottom: 20%;
+    right: 15%;
+    background: rgba(255, 0, 255, 0.3); /* Viola shock */
+}
+
+.shape-three {
+    width: 200px;
+    height: 200px;
+    top: 30%;
+    right: 25%;
+    background: rgba(0, 255, 0, 0.3); /* Verde shock */
+}
+
+.shape-four {
+    width: 180px;
+    height: 180px;
+    bottom: 10%;
+    left: 20%;
+    background: rgba(0, 0, 255, 0.3); /* Blu scuro */
+}
+
+/* Animazioni */
+@keyframes moveShapes {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(20px, 20px); }
+    100% { transform: translate(0, 0); }
+}
+
+.shape {
+    animation: moveShapes 10s infinite alternate;
+}
+
+/* Call to Action */
+.cta {
+    background-color: #00ff00; /* Verde shock */
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
-        text-align: center;
-    }
     nav ul li {
         display: block;
         margin: 10px 0;
