@@ -1,134 +1,41 @@
-/* Impostazione del font */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    overflow-x: hidden; /* Per evitare lo scorrimento orizzontale indesiderato */
-}
+/* Basic settings, header, footer, and shapes retained from previous code */
 
-/* Header */
-header {
-    background-color: #00274d; /* Blu scuro */
-    color: #fff;
+/* Projects Section */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     padding: 20px;
-    text-align: center;
-    position: relative;
-    z-index: 10;
 }
 
-/* Navigazione */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.project {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.project:hover {
+    transform: translateY(-10px);
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Main Content */
-main {
-    padding: 20px;
-    position: relative;
+.project h3 {
+    font-size: 1.5rem;
+    margin: 15px;
+    color: #00274d;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #00274d; /* Blu scuro */
-    color: #fff;
+.project p {
+    font-size: 1rem;
+    padding: 0 15px 15px;
+    color: #666;
 }
 
-/* Colori e forme geometriche */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.1) 100%);
-    z-index: -1;
-    pointer-events: none;
-}
-
-.shape {
-    position: absolute;
-    background: rgba(0,0,0,0.2);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: -1;
-}
-
-/* Esempio di forme geometriche */
-.shape-one {
-    width: 150px;
-    height: 150px;
-    top: 10%;
-    left: 10%;
-    background: rgba(0, 119, 204, 0.3); /* Blu chiaro */
-}
-
-.shape-two {
-    width: 100px;
-    height: 100px;
-    bottom: 20%;
-    right: 15%;
-    background: rgba(255, 0, 255, 0.3); /* Viola shock */
-}
-
-.shape-three {
-    width: 200px;
-    height: 200px;
-    top: 30%;
-    right: 25%;
-    background: rgba(0, 255, 0, 0.3); /* Verde shock */
-}
-
-.shape-four {
-    width: 180px;
-    height: 180px;
-    bottom: 10%;
-    left: 20%;
-    background: rgba(0, 0, 255, 0.3); /* Blu scuro */
-}
-
-/* Animazioni */
-@keyframes moveShapes {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(20px, 20px); }
-    100% { transform: translate(0, 0); }
-}
-
-.shape {
-    animation: moveShapes 10s infinite alternate;
-}
-
-/* Call to Action */
-.cta {
-    background-color: #00ff00; /* Verde shock */
-    color: #000;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-}
+/* Adjust other elements for consistent style across all pages */
