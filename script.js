@@ -1,0 +1,1 @@
+// Funzioni interattive future
